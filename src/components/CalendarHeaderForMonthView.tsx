@@ -18,7 +18,7 @@ export interface CalendarHeaderForMonthViewProps {
   headerCellAccessibilityProps?: AccessibilityProps
 }
 
-function _CalendarHeaderForMonthView({
+function CalendarHeaderForMonthViewImpl({
   locale,
   weekStartsOn,
   style,
@@ -89,4 +89,4 @@ function _CalendarHeaderForMonthView({
   )
 }
 
-export const CalendarHeaderForMonthView = typedMemo(_CalendarHeaderForMonthView)
+export const CalendarHeaderForMonthView = typedMemo(CalendarHeaderForMonthViewImpl)

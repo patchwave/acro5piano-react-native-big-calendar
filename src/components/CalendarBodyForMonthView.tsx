@@ -60,7 +60,7 @@ interface CalendarBodyForMonthViewProps<T extends ICalendarEventBase> {
   disableMonthEventCellPress?: boolean
 }
 
-function _CalendarBodyForMonthView<T extends ICalendarEventBase>({
+function CalendarBodyForMonthViewImpl<T extends ICalendarEventBase>({
   containerHeight,
   targetDate,
   style,
@@ -422,7 +422,7 @@ function _CalendarBodyForMonthView<T extends ICalendarEventBase>({
   )
 }
 
-export const CalendarBodyForMonthView = typedMemo(_CalendarBodyForMonthView)
+export const CalendarBodyForMonthView = typedMemo(CalendarBodyForMonthViewImpl)
 
 /**
  * A utility component which prevents event cells from being pressed in Month View.

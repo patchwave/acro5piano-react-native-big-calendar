@@ -33,7 +33,7 @@ export interface CalendarHeaderProps<T extends ICalendarEventBase> {
   headerCellAccessibilityProps?: AccessibilityProps
 }
 
-function _CalendarHeader<T extends ICalendarEventBase>({
+function CalendarHeaderImpl<T extends ICalendarEventBase>({
   dateRange,
   cellHeight,
   style,
@@ -241,4 +241,4 @@ function _CalendarHeader<T extends ICalendarEventBase>({
   )
 }
 
-export const CalendarHeader = typedMemo(_CalendarHeader)
+export const CalendarHeader = typedMemo(CalendarHeaderImpl)

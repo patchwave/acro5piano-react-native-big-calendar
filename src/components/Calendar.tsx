@@ -18,7 +18,7 @@ export interface CalendarProps<T extends ICalendarEventBase> extends CalendarCon
 
 dayjs.extend(isBetween)
 
-function _Calendar<T extends ICalendarEventBase>({
+function CalendarImpl<T extends ICalendarEventBase>({
   theme = defaultTheme,
   isRTL,
   ...props
@@ -35,4 +35,4 @@ function _Calendar<T extends ICalendarEventBase>({
   )
 }
 
-export const Calendar = typedMemo(_Calendar)
+export const Calendar = typedMemo(CalendarImpl)

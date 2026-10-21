@@ -82,7 +82,7 @@ interface CalendarBodyProps<T extends ICalendarEventBase> {
   hourComponent?: HourRenderer
 }
 
-function _CalendarBody<T extends ICalendarEventBase>({
+function CalendarBodyImpl<T extends ICalendarEventBase>({
   containerHeight,
   cellHeight,
   dateRange,
@@ -356,4 +356,4 @@ function _CalendarBody<T extends ICalendarEventBase>({
   )
 }
 
-export const CalendarBody = typedMemo(_CalendarBody)
+export const CalendarBody = typedMemo(CalendarBodyImpl)

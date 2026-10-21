@@ -63,7 +63,7 @@ interface ScheduleProps<T extends ICalendarEventBase> {
   scheduleMonthSeparatorStyle?: TextStyle
 }
 
-function _Schedule<T extends ICalendarEventBase>({
+function ScheduleImpl<T extends ICalendarEventBase>({
   events,
   ampm,
   onPressEvent,
@@ -246,4 +246,4 @@ function _Schedule<T extends ICalendarEventBase>({
   )
 }
 
-export const Schedule = typedMemo(_Schedule)
+export const Schedule = typedMemo(ScheduleImpl)

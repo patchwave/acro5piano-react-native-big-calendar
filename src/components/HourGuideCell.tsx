@@ -18,7 +18,7 @@ interface HourGuideCellProps {
   timeslots: number
 }
 
-const _HourGuideCell = ({
+const HourGuideCellImpl = ({
   cellHeight,
   onLongPress,
   onPress,
@@ -72,4 +72,4 @@ const _HourGuideCell = ({
   )
 }
 
-export const HourGuideCell = React.memo(_HourGuideCell)
+export const HourGuideCell = React.memo(HourGuideCellImpl)

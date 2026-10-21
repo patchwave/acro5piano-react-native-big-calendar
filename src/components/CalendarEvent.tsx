@@ -40,7 +40,7 @@ interface CalendarEventProps<T extends ICalendarEventBase> {
   hours?: number
 }
 
-function _CalendarEvent<T extends ICalendarEventBase>({
+function CalendarEventImpl<T extends ICalendarEventBase>({
   event,
   onPressEvent,
   eventCellStyle,
@@ -99,4 +99,4 @@ function _CalendarEvent<T extends ICalendarEventBase>({
   )
 }
 
-export const CalendarEvent = typedMemo(_CalendarEvent)
+export const CalendarEvent = typedMemo(CalendarEventImpl)

@@ -157,7 +157,7 @@ export interface CalendarContainerProps<T extends ICalendarEventBase> {
   scheduleMonthSeparatorStyle?: TextStyle
 }
 
-function _CalendarContainer<T extends ICalendarEventBase>({
+function CalendarContainerImpl<T extends ICalendarEventBase>({
   events,
   height,
   hourRowHeight,
@@ -474,4 +474,4 @@ function _CalendarContainer<T extends ICalendarEventBase>({
   )
 }
 
-export const CalendarContainer = typedMemo(_CalendarContainer)
+export const CalendarContainer = typedMemo(CalendarContainerImpl)

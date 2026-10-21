@@ -24,7 +24,7 @@ interface CalendarEventProps<T extends ICalendarEventBase> {
   showAdjacentMonths: boolean
 }
 
-function _CalendarEventForMonthView<T extends ICalendarEventBase>({
+function CalendarEventForMonthViewImpl<T extends ICalendarEventBase>({
   event,
   onPressEvent,
   eventCellStyle,
@@ -94,4 +94,4 @@ function _CalendarEventForMonthView<T extends ICalendarEventBase>({
   )
 }
 
-export const CalendarEventForMonthView = typedMemo(_CalendarEventForMonthView)
+export const CalendarEventForMonthView = typedMemo(CalendarEventForMonthViewImpl)
